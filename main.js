@@ -5,11 +5,12 @@ $(document).ready(function() {
 		$('p').hide();
 		$(this).after(input);
 		$(this).after(cancel);
+
+		$('button').on('click', function() {
+			$('button').hide();
+			$('p').show();
+			input.hide();
+			// $(this).after(revert);
+		});	
 	});
-	$('button').on('click', function() {
-		// var revert = $('<p>Hover over this text to enable edit in place demo.</p>');
-		$('.edit-input').hide();
-		$('button').hide();
-		// $(this).after(revert);
-	});	
 });
